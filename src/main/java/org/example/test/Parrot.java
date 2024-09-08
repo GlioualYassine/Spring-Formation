@@ -22,7 +22,7 @@ public class Parrot {
 
      @PostConstruct
      public void init() {
-         this.name = "Koko";
+         //this.name = "Koko";
          System.out.println("Le Parrot a été initialisé avec le nom : " + name);
      }
 
