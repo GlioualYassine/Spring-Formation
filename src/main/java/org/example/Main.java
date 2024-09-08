@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.ioc.Sim;
 import org.example.test.Parrot;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -12,9 +13,19 @@ public class Main {
     public static void main(String[] args) {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        Parrot p = context.getBean("parrot",Parrot.class);
-        System.out.println(p.getName());
+
+        Sim sim = context.getBean("sim", Sim.class);
+        sim.calling();
+        sim.data();
+
         ((ConfigurableApplicationContext) context).close();
+
+
+
+//        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+//        Parrot p = context.getBean("parrot",Parrot.class);
+//        System.out.println(p.getName());
+//        ((ConfigurableApplicationContext) context).close();
 
         //        var context  = new AnnotationConfigApplicationContext(ProjectConfig.class);
 //

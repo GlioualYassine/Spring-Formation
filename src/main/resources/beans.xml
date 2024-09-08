@@ -4,11 +4,14 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean id="sim" class="org.example.ioc.Vodaphone"/>
     <bean id="parrot" class="org.example.test.Parrot">
         <property name="name" value="koko"/>
     </bean>
     <bean id="parrot2" class="org.example.test.Parrot">
         <property name="name" value="Polly"/>
     </bean>
-    <context:component-scan base-package="org.example.test"/>
+    <context:component-scan base-package="org.example"/>
 </beans>
