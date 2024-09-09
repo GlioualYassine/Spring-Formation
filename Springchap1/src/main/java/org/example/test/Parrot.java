@@ -5,7 +5,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Component;
 
- //@Component
+ @Component
 public class Parrot {
     private String name;
 

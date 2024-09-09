@@ -1,24 +1,17 @@
 package org.example;
 
-import org.example.ioc.Sim;
-import org.example.test.Parrot;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.util.function.Supplier;
-
 public class Main {
     public static void main(String[] args) {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
-        Sim sim = context.getBean("sim", Sim.class);
-        sim.calling();
-        sim.data();
 
-        ((ConfigurableApplicationContext) context).close();
+//        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+//
+//        Sim sim = context.getBean("sim", Sim.class);
+//        sim.calling();
+//        sim.data();
+//
+//        ((ConfigurableApplicationContext) context).close();
 
 
 
